@@ -17,7 +17,7 @@ const userSocketMap = {};
 io.on('connection', (socket) => {
     console.log("a user connected", socket.id)
 
-    //socket.on() is used to listen to the events. can be used for both client and server side
+    //socket.on() is used to listen to the events. Can be used for both client and server side
     socket.on("disconnect", () => {
         console.log("user disconnected", socket.id)
     })
