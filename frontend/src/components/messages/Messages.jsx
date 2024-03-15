@@ -6,7 +6,6 @@ import useListenMessages from "../../hooks/useListenMessages";
 
 const Messages = () => {
 	const { messages, loading } = useGetMessages();
-  console.log("messages:", messages);
 	useListenMessages();
 	const lastMessageRef = useRef();
 
@@ -24,7 +23,7 @@ const Messages = () => {
 					<div key={message._id} ref={lastMessageRef}>
 						<Message message={message} />
 					</div>
-          // <Message key={message._id} message={message} />
+        //   <Message key={message._id} message={message} />
 				))}
 
 			{loading && [...Array(3)].map((_, idx) => <MessageSkeleton key={idx} />)}
